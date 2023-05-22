@@ -25,11 +25,11 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         try:
-            city = input("choose a city to analyze: chicago, new york city or washington.\n").strip()
-            if city.lower() not in CITY_NAME:
+            city = input("choose a city to analyze: chicago, new york city or washington.\n").lower().strip()
+            if city not in CITY_NAME:
                 print("\n *** Invalid user input. Please choose a city from - chicago, new york city or washington ***\n")
             else:
-                city = CITY_NAME.index(city.lower())
+                city = CITY_NAME.index(city)
                 break
         except ValueError:
             print("\n *** Invalid user input. Please choose a city from - chicago, new york city or washington ***\n")
@@ -38,14 +38,14 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     while True:
         try:
-            month = input("choose a specific month: Enter january, february, march, april, .. , november, december or all (for all months) \n").strip()
-            if month.lower() not in MONTHS and month.lower() != 'all':
+            month = input("choose a specific month: Enter january, february, march, april, .. , november, december or all (for all months) \n").lower().strip()
+            if month not in MONTHS and month != 'all':
                 print("\n *** Invalid user input. Please enter a month as january, february, march, april, .. , november, december or all (for all months) ***\n")
             else:
-                if month.lower() == 'all':
+                if month == 'all':
                     month = 0
                 else:
-                    month = MONTHS.index(month.lower())
+                    month = MONTHS.index(month)
                 break
         except ValueError:
             print("\n *** Invalid user input. Please enter a month as january, february, march, april, .. , november, december or all (for all months) ***\n")
@@ -54,14 +54,14 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         try:
-            day = input("choose a specific day of week: Enter monday, tuesday, .. , saturday, sunday or all (for all days of the week) \n").strip()
-            if day.lower() not in WEEK_DAYS and day.lower() != 'all':
+            day = input("choose a specific day of week: Enter monday, tuesday, .. , saturday, sunday or all (for all days of the week) \n").lower().strip()
+            if day not in WEEK_DAYS and day != 'all':
                 print("\n *** Invalid user input. Please choose a day as monday, tuesday, .. , saturday, sunday or all (for all days of the week) ***\n")
             else:
-                if day.lower() == 'all':
+                if day == 'all':
                     day = 0
                 else:
-                    day = WEEK_DAYS.index(day.lower())
+                    day = WEEK_DAYS.index(day)
                 break
         except ValueError:
             print("\n *** Invalid user input. Please choose a day as monday, tuesday, .. , saturday, sunday or all (for all days of the week) ***\n")
