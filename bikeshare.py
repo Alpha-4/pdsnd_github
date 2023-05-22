@@ -210,11 +210,11 @@ def generate_data(df,size,count):
 def print_data(city):
     """Displays 5 records to user"""
     
-    city_index=[x for x in CITY_DATA.keys()][city-1]
-    data_df = pd.read_csv(CITY_DATA[city_index]);
+    city_index = [x for x in CITY_DATA.keys()][city-1]
+    data_df = pd.read_csv(CITY_DATA[city_index])
     
     # Added column name to column with ids
-    data_df.columns.values[0]='User ID'
+    data_df.columns.values[0] = 'User ID'
     
     # Prompt for user input to display records
     show_data = input('\nWould you like to see 5 trip data records? Enter \'yes\' to view data or else \'no\'.\n')
