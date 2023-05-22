@@ -12,4 +12,6 @@ In Bikeshare Data Analysis project we tried to explore data related to bike shar
 Bikeshare.py
 
 ### Credits
-
+1. https://pandas.pydata.org/docs/reference/frame.html
+2. https://sparkbyexamples.com
+3. https://stackoverflow.com
